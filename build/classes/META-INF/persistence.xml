@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="POSsystemPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.store.pos.model.entity.ItemDiscount</class>
+    <class>com.store.pos.model.entity.Customer</class>
+    <class>com.store.pos.model.entity.CustomerLoan</class>
+    <class>com.store.pos.model.entity.Item</class>
+    <class>com.store.pos.model.entity.ItemCategory</class>
+    <class>com.store.pos.model.entity.ItemStock</class>
+    <class>com.store.pos.model.entity.Profit</class>
+    <class>com.store.pos.model.entity.SupplierDetails</class>
+    <class>com.store.pos.gui.Supplierdetails</class>
+    <class>com.store.pos.model.entity.User</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/pos_db_store?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="1234"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create-or-extend-tables"/>
+    </properties>
+  </persistence-unit>
+</persistence>
